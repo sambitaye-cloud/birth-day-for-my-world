@@ -1,56 +1,157 @@
-
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Happy Birthday My Love ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Queen ❤️</title>
+
 <style>
+* { box-sizing: border-box; }
+
 body {
-  background: linear-gradient(#65002f,#ff668c);
-  color: white;
-  font-family: Georgia,serif;
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 15px;
   text-align: center;
-  padding: 25px;
+  font-family: Georgia, serif;
+  color: white;
+  background: linear-gradient(135deg, #4b002b, #d6336c, #ff9ebc);
+  overflow-x: hidden;
 }
-img {
+
+h1 {
+  font-size: 34px;
+  text-shadow: 0 0 15px pink;
+}
+
+p { line-height: 1.8; }
+
+.photo {
   width: 230px;
   height: 280px;
   object-fit: cover;
   border-radius: 25px;
-  border: 3px solid pink;
+  border: 3px solid #ffd6e7;
+  box-shadow: 0 0 25px #ffb6d5;
 }
+
 button {
-  background: #ffb6ce;
-  color: #65002f;
-  padding: 14px;
-  border: 0;
-  border-radius: 25px;
-  font-size: 17px;
+  background: #ffe0ec;
+  color: #850044;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 22px;
+  margin: 12px;
+  font-size: 16px;
+  cursor: pointer;
 }
-#letter { display: none; line-height: 1.8; }
+
+button:hover { transform: scale(1.05); }
+
+#letter {
+  display: none;
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 25px;
+  color: #850044;
+  background: #fff0f6;
+  border-radius: 20px;
+  box-shadow: 0 0 25px pink;
+  animation: appear 1s ease;
+}
+
+.envelope {
+  font-size: 75px;
+  animation: heartbeat 1.4s infinite;
+}
+
+#secret {
+  display: none;
+  font-size: 22px;
+  margin: 25px auto;
+  animation: appear 2s ease;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: floatUp 6s linear forwards;
+  z-index: 10;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.15); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 </style>
 </head>
+
 <body>
+
 <h1>Happy Birthday, My Queen ❤️</h1>
-<p>You make my world beautiful 💕</p>
-<img src="gf.jpg" alt="My love">
-<br><br>
-<button onclick="document.getElementById('letter').style.display='block'">
-💌 Open Your Love Letter
-</button>
+<p>Today is special because the world was blessed with YOU. 💖</p>
+
+<img class="photo" src="gf.jpg" alt="My beautiful girl">
+
+<p>You are my favorite person, my sweetest thought, and my heart's home. 🥹💕</p>
+
+<div class="envelope">💌</div>
+
+<button onclick="openLetter()">Open Your Love Letter ❤️</button>
+
 <div id="letter">
-<h2>To My Beautiful Girl ❤️</h2>
-<p>Happy birthday, my love!</p>
-<p>You are one of the most beautiful gifts life has given me.
-Your smile makes my days brighter, and your love makes my
-world more special.</p>
-<p>I wish you happiness, success, and all the beautiful things
-your heart desires. If I could choose again, I would choose
-you every time. ❤️</p>
-<p>I love you more than words can say.</p>
-<h3>Forever yours, ❤️</h3>
-<h3>SAMBI WAGARI</h3>
+  <h2>To My Beautiful Girl 🌹</h2>
+  <p>Happy birthday, my love! ❤️</p>
+  <p>Your smile brings light into my darkest days. Your presence makes ordinary moments feel magical, and loving you is one of the most beautiful parts of my life.</p>
+  <p>I wish you endless happiness, success, peace, and every beautiful thing your heart dreams of.</p>
+  <p>If I could choose a thousand times, I would still choose you. Today, tomorrow, and every day after. 💖</p>
+  <h3>Forever yours, ❤️</h3>
+  <h3>SAMBI WAGARI</h3>
+  <button onclick="showSecret()">One More Surprise 💝</button>
 </div>
-<p>Made with love 💖</p>
+
+<div id="secret">
+  <h2>My Promise to You ❤️</h2>
+  <p>No matter how many birthdays come and go, I will keep choosing you. Through the happy days, the difficult days, and every chapter in between. 🌹</p>
+  <p>You are not just part of my story. You are my favorite chapter. 💋</p>
+  <h1>I LOVE YOU! ❤️</h1>
+</div>
+
+<p>Made with all my love 💖</p>
+
+<script>
+function openLetter() {
+  document.getElementById("letter").style.display = "block";
+}
+
+function showSecret() {
+  document.getElementById("secret").style.display = "block";
+  document.getElementById("secret").scrollIntoView({behavior: "smooth"});
+}
+
+function makeHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = ["❤️", "💖", "💕", "💗", "💘"][Math.floor(Math.random() * 5)];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (16 + Math.random() * 22) + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}
+
+setInterval(makeHeart, 500);
+</script>
+
 </body>
 </html>
+```
