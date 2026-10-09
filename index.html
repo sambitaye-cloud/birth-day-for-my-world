@@ -1,10 +1,10 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="om">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday My Queen ❤️</title>
+<title>Baga Guyyaa Dhaloota Keetii Geesse, Jaalallee Koo ❤️</title>
 
 <style>
 * { box-sizing: border-box; }
@@ -21,11 +21,11 @@ body {
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 32px;
   text-shadow: 0 0 15px pink;
 }
 
-p { line-height: 1.8; }
+p { line-height: 1.9; }
 
 .photo {
   width: 230px;
@@ -68,7 +68,7 @@ button:hover { transform: scale(1.05); }
 
 #secret {
   display: none;
-  font-size: 22px;
+  font-size: 20px;
   margin: 25px auto;
   animation: appear 2s ease;
 }
@@ -98,36 +98,46 @@ button:hover { transform: scale(1.05); }
 
 <body>
 
-<h1>Happy Birthday, My Queen ❤️</h1>
-<p>Today is special because the world was blessed with YOU. 💖</p>
+<h1>Baga Guyyaa Dhaloota Keetii Geesse, Mootittii Koo ❤️</h1>
 
-<img class="photo" src="gf.jpg" alt="My beautiful girl">
+<p>Har’a guyyaa addaa dha, sababni isaas addunyaan si argachuun kennaa guddaa argatte. 💖</p>
 
-<p>You are my favorite person, my sweetest thought, and my heart's home. 🥹💕</p>
+<img class="photo" src="gf.jpg" alt="Intala koo bareedduu">
+
+<p>Ati gammachuu garaa koo, yaada koo isa mi'aawaa fi mana onnee koo ti. 🥹💕</p>
 
 <div class="envelope">💌</div>
 
-<button onclick="openLetter()">Open Your Love Letter ❤️</button>
+<button onclick="openLetter()">💌 Xalayaa Jaalalaa Koo Bani</button>
 
 <div id="letter">
-  <h2>To My Beautiful Girl 🌹</h2>
-  <p>Happy birthday, my love! ❤️</p>
-  <p>Your smile brings light into my darkest days. Your presence makes ordinary moments feel magical, and loving you is one of the most beautiful parts of my life.</p>
-  <p>I wish you endless happiness, success, peace, and every beautiful thing your heart dreams of.</p>
-  <p>If I could choose a thousand times, I would still choose you. Today, tomorrow, and every day after. 💖</p>
-  <h3>Forever yours, ❤️</h3>
-  <h3>SAMBI WAGARI</h3>
-  <button onclick="showSecret()">One More Surprise 💝</button>
+  <h2>Intala Koo Bareedduu ❤️</h2>
+
+  <p>Jaalallee koo, guyyaa dhaloota keetii baga geesse! ❤️</p>
+
+  <p>Seeqni kee guyyoota koo dukkanoo ta’an illee ni ifa godha. Ati na bira yeroo jirtu, yeroo idilee illee yeroo addaa fi bareedaa ta’a. Si jaallachuun jireenya koo keessatti wantoota baay’ee bareedoo keessaa isa tokko dha.</p>
+
+  <p>Gammachuu dhuma hin qabne, milkaa’ina, nagaa fi wantoota bareedoo onneen kee hawwu hundumaa siif hawwa.</p>
+
+  <p>Si filachuuf yeroo kuma carraa argadhe, yeroo hundumaa si filadha. Har’as, borus, bara baraan. 💖</p>
+
+  <h3>Yeroo hundumaa kan si jaallatu, ❤️</h3>
+  <h3>JAALALLEE KEE SAMBI💋</h3>
+
+  <button onclick="showSecret()">💝 Ergaa Iccitii Koo Ilaali</button>
 </div>
 
 <div id="secret">
-  <h2>My Promise to You ❤️</h2>
-  <p>No matter how many birthdays come and go, I will keep choosing you. Through the happy days, the difficult days, and every chapter in between. 🌹</p>
-  <p>You are not just part of my story. You are my favorite chapter. 💋</p>
-  <h1>I LOVE YOU! ❤️</h1>
+  <h2>Waadaa Onnee Koo ❤️</h2>
+
+  <p>Mootittii koo, guyyoonni dhalootaa hammam iyyuu haa darban, ani si filachuu koo hin dhiisu. Guyyoota gammachuu, guyyaa rakkinaa fi kutaa jireenyaa keenya hunda keessatti si cinaa nan jiraadha. 🌹</p>
+
+  <p>Ati seenaa jireenya koo keessatti qofa hin argamtu; ati kutaa ani hundumaa caalaa jaalladhu dha. 💖</p>
+
+  <h1>SI JAALLADHA! ❤️</h1>
 </div>
 
-<p>Made with all my love 💖</p>
+<p>Jaalala koo guutuudhaan siif qophaa'e 💖</p>
 
 <script>
 function openLetter() {
@@ -142,7 +152,9 @@ function showSecret() {
 function makeHeart() {
   const heart = document.createElement("div");
   heart.className = "heart";
-  heart.textContent = ["❤️", "💖", "💕", "💗", "💘"][Math.floor(Math.random() * 5)];
+  heart.textContent = ["❤️", "💖", "💕", "💗", "💘"][
+    Math.floor(Math.random() * 5)
+  ];
   heart.style.left = Math.random() * 100 + "vw";
   heart.style.fontSize = (16 + Math.random() * 22) + "px";
   document.body.appendChild(heart);
